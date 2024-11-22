@@ -81,6 +81,7 @@ public class queuelinkedlist {
             return value;
         }
         
+        //! display the result queue
         void print() {
             if(isEmpty()) {
                 System.out.print("Queue is empty.");
