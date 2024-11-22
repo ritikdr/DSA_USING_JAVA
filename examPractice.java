@@ -467,67 +467,67 @@
 
 //38 (Dought******)
 
-// import java.util.Scanner;
-
-// public class examPractice {
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         System.out.print("Enter the number: ");
-//         int n = sc.nextInt();
-
-//         System.out.print("sum of digit of " + n + " is: ");
-//         sum(n);
-//     }
-//     public static int sum(int num) {
-//         if(num == 0) {
-//             return 0;
-//         }
-//         int result = 0;
-//         int digit = sum(num) % 10;
-//         result = result + digit;
-//         sum(num / 10);
-//         return result;
-//     }
-// }
-
-
-//39
-
 import java.util.Scanner;
 
 public class examPractice {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Enter the size of array: ");
+        System.out.print("Enter the number: ");
         int n = sc.nextInt();
 
-        int[] arr = new int[n];
-        System.out.print("\nEnter the element: ");
-        for(int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        System.out.print("\nEnter the target: ");
-        int target = sc.nextInt();
-
-        System.out.println("pair with the sum is " + target);
-        findpair(arr, target);
-
-        sc.close();
+        System.out.print("sum of digit of " + n + " is: ");
+        sum(n);
     }
-    public static void findpair(int[] arr, int target) {
-        boolean found = false;
-        for(int i = 0;i < arr.length; i++) {
-            for(int j = i + 1; j < arr.length; j++) {
-                if(arr[i] + arr[j] == target) {
-                    System.out.println("(" + arr[i] +","+ arr[j] + ")");
-                    found = true;
-                }
-            }
+    public static int sum(int num) {
+        if(num == 0) {
+            return 0;
         }
-        if(!found) {
-            System.out.println("pair not found.");
-        }
+        int result = 0;
+        int digit = sum(num) % 10;
+        result = result + digit;
+        sum(num / 10);
+        return result;
     }
 }
+
+
+//39
+
+// import java.util.Scanner;
+
+// public class examPractice {
+//     public static void main(String[] args) {
+//         Scanner sc = new Scanner(System.in);
+
+//         System.out.print("Enter the size of array: ");
+//         int n = sc.nextInt();
+
+//         int[] arr = new int[n];
+//         System.out.print("\nEnter the element: ");
+//         for(int i = 0; i < n; i++) {
+//             arr[i] = sc.nextInt();
+//         }
+
+//         System.out.print("\nEnter the target: ");
+//         int target = sc.nextInt();
+
+//         System.out.println("pair with the sum is " + target);
+//         findpair(arr, target);
+
+//         sc.close();
+//     }
+//     public static void findpair(int[] arr, int target) {
+//         boolean found = false;
+//         for(int i = 0;i < arr.length; i++) {
+//             for(int j = i + 1; j < arr.length; j++) {
+//                 if(arr[i] + arr[j] == target) {
+//                     System.out.println("(" + arr[i] +","+ arr[j] + ")");
+//                     found = true;
+//                 }
+//             }
+//         }
+//         if(!found) {
+//             System.out.println("pair not found.");
+//         }
+//     }
+// }
