@@ -1,4 +1,4 @@
-package Queue;
+//package Queue;
 
 public class queuelinkedlist {
     static class node{

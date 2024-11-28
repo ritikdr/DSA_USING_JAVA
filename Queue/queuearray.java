@@ -1,4 +1,4 @@
-package Queue;
+//package Queue;
 
 public class queuearray {
     public static void main(String[] args) {
@@ -9,9 +9,9 @@ public class queuearray {
         System.out.print("Queue is: ");
         queue.print(arr);
 
-        // queue.equeue(7);
-        // System.out.print("after equeue of element in queue: ");
-        // queue.print(arr);
+        queue.equeue(7);
+        System.out.print("after equeue of element in queue: ");
+        queue.print(arr);
 
         System.out.println("dequeue element is: " + queue.dequeue());
 
@@ -40,13 +40,14 @@ public class queuearray {
             return rear == arr.length - 1;
         }
 
-        // void equeue(int value) {
-        //     if(isFull()) {
-        //         System.out.println("Queue is Full.");
-        //     } 
-        //     arr[rear + 1] = value;
-        //     rear = rear + 1;
-        // }
+        void equeue(int value) {
+            if(isFull()) {
+                System.out.println("Queue is Full.");
+                return;
+            } 
+            arr[rear + 1] = value;
+            rear = rear + 1;
+        }
 
         int dequeue() {
             if(isEmpty()) {
