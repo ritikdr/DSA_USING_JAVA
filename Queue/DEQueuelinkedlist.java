@@ -1,4 +1,4 @@
-public class DEQueue {
+public class DEQueuelinkedlist {
     static class node{
         int data;
         node next;
